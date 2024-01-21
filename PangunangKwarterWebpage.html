@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Paglalakbay Tungo sa Hiraya</title>
+			<style>
+				.navbar {
+					background-color: #781818;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					height: 80px;
+					padding: 0 20px;
+				}
+				.logo {
+					display: flex;
+					align-items: center; 
+					font-family: "Times New Roman", serif;
+					font-size: 24px;
+					color: #f2d6b6;
+				}
+				.logo img {
+				width: 50px;
+				height: auto;
+				margin-right: 10px;
+				}
+				.nav-links {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					display: flex;
+				}
+				.nav-links li {
+					margin: 0 20px;
+				}
+				.nav-links a {
+					font-family: "Times New Roman", serif; 
+					font-size: 18px; 
+					color: #f2d6b6; 
+					text-decoration: none;
+				}
+				.social-icon {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					margin-right: 5px;
+				}
+				.facebook-icon, twitter-icon {
+					max-width: 100%;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="navbar">
+				<div class="logo">
+					<img src="sisananakagapos.jpg" alt="Logo">
+					Paglalakbay Tungo sa Hiraya
+				</div>
+				<ul class="nav-links">
+					<li><a href="AtingBalikanWebpage.html">Ating Balikan</a></li>
+					<li><a href="#">Unang Kwarter</a></li>
+					<li><a href="PangalawangKwarterWebpage.html">Ikalawang Kwarter</a></li>
+					<li><a href="PangatlongKwarterWebpage.html">Ikatlong Kwarter</a></li>
+					<li><a href="PangapatKwarterWebpage.html">Ikaapat na Kwarter</a></li>
+				</ul>
+				<a href="https://www.facebook.com/novy.fermasis" class="facebook-link">
+					<img src="facebookicon.png" alt="Facebook Icon" class="social-icon facebook-icon">
+				</a>
+				<a href="https://www.twitter.com/alagadsrc2023?t=Qm7KBW8CFk8V8qj1nlO45w&s=09" class="twitter-link">
+					<img src="twittericon.png" alt="Twitter Icon" class="social-icon twitter-icon">
+				</a>
+			</div>
+
+			<div>
+				<iframe 
+					width="1300" 
+					height="630" 
+					src="https://www.youtube.com/embed/zcOUXl0Zcd4" 
+					frameborder="0" 
+					allowfullscreen
+					allow="autoplay; encrypted-media"
+				></iframe>
+			</div>
+			<div>
+				<button onclick="pauseVideo()">Pause</button>
+				<button onclick="playVideo()">Play</button>
+				<button onclick="stopVideo()">Stop</button>
+			</div>
+
+			<script>
+				var player;
+
+				function onYouTubeIframeAPIReady() {
+					player = new YT.Player('player', {
+						events: {
+							'onReady': onPlayerReady,
+							'onStateChange': onPlayerStateChange
+						}
+					});
+				}
+
+				function pauseVideo() {
+					player.pauseVideo();
+				}
+
+				function playVideo() {
+					player.playVideo();
+				}
+
+				function stopVideo() {
+					player.stopVideo();
+				}
+			</script>
+			
+			<script src="https://www.youtube.com/iframe_api"></script>
+		</body>
+	</html>
+
+	
+	
